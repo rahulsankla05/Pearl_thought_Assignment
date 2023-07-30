@@ -11,14 +11,14 @@ public class carryFwd {
         int count=0;  // it will count number of "g"
         int ans=0;  // it will give the final number of pairs of "a" with "g"  i!=j and s[i]=='a'  s[j]=='g'
         int n=s.length();
-        for(int i=n-1;i>=0;i--){
+//        from Left to Ryt s[i]=="a" cnt++ and s[i]=="g" then ans=ans+count
+//        from ryt to left s[i]=="g"  cnt++ and s[i]=="a" then ans+count
+        for(int i=0;i<n;i++){
             char ch =s.charAt(i);
-            if(ch == 'g'){
+            if(ch == 'a'){
                 count++;
-            } else if (ch == 'a') {
+            } else if (ch == 'g') {
                 ans+=count;
-            }else{
-                count=count;
             }
         }
         System.out.println(ans);
